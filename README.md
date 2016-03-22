@@ -1,4 +1,3 @@
-# Project1
-test project
+# test project
 
-Haha good st
+Donaven + Johnny + Vinay git testing spot for commits, updates, learning GitHub....
