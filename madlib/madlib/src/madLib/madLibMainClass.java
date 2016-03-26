@@ -10,5 +10,6 @@ public class madLibMainClass {
 		 		System.out.println(longText[counter]);
 		 	}	
 	}	
+
 }
 
