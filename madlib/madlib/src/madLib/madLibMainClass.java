@@ -4,10 +4,10 @@ import javax.swing.JOptionPane;
 public class madLibMainClass {
 	
 	public static void main(String[] args) {
+		String combinedText = "";
 	    String shortText[] = new String[9];
 		String longText[] = new String[9];
-		String returnArray[] = new String[9];//when a return is needed, this can be placed after where a return is desired.
-
+		
 		shortText[0] = JOptionPane.showInputDialog("Enter an animal.");
 		shortText[1] = JOptionPane.showInputDialog("Enter a location.");
 	    shortText[2] = JOptionPane.showInputDialog("Enter a small number.");
@@ -20,7 +20,7 @@ public class madLibMainClass {
 	    shortText[8] = "";
 
 		longText[0] = "Help! I cannot find my ";
-		longText[1] = " anywhere! The last time I saw him/her was in ";
+		longText[1] = " anywhere! The last time I saw it was in ";
 		longText[2] = "about ";
 		longText[3] = " days ago. He has ";
 		longText[4] = ", tiny ";
@@ -29,17 +29,22 @@ public class madLibMainClass {
 		longText[7] = "If you see any sign of him/her, call me or find me at ";
 		longText[8] = " from 9 AM to 5 PM. Thanks!";
 		
-		returnArray[1] = "return";
-		returnArray[6] = "return";
-		
-		
-		 	for(int counter=0;counter<longText.length;counter++){
-		 		System.out.print(longText[counter]+shortText[counter]);
-		 		if (returnArray[counter] == "return") {
-		 			System.out.print("\r");
+	
+		 	for(int counter=0;counter<longText.length;counter++){		 		
+		 		//System.out.println(longText[counter]+shortText[counter]);
+		 		combinedText = combinedText + longText[counter]+shortText[counter];
 		 		}
-		 	}	
+		String[] splitText = combinedText.split(" ");
+			for(int word=0;word<splitText.length;word++)
+				if ( word != 0 && word % 17 == 0) {
+					System.out.print(splitText[word]+"\r");
+				}else{
+					System.out.print(splitText[word] + " ");	
+	 		}
+		}
+		 	
+		 		
 	}	
 
-}
+
 
