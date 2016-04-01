@@ -1,6 +1,8 @@
 package madLib;
 import javax.swing.JOptionPane;
 
+//check out http://www.tutorialspoint.com/java/util/scanner_hasnextline.htm
+
 public class madLibMainClass {
 	
 	public static void main(String[] args) {
@@ -15,13 +17,13 @@ public class madLibMainClass {
 	    shortText[4] = JOptionPane.showInputDialog("Enter a body part.");
 	    shortText[5] = JOptionPane.showInputDialog("Enter an adjective.");
 	    shortText[6] = JOptionPane.showInputDialog("Enter another body part.");
-	    shortText[6] = shortText[6] + ".";//adding a period at the end of this word..
+	    shortText[6] = shortText[6] + ". ";//adding a period at the end of this word..
 	    shortText[7] = JOptionPane.showInputDialog("Enter a location.");
 	    shortText[8] = "";
 
 		longText[0] = "Help! I cannot find my ";
 		longText[1] = " anywhere! The last time I saw it was in ";
-		longText[2] = "about ";
+		longText[2] = " about ";
 		longText[3] = " days ago. He has ";
 		longText[4] = ", tiny ";
 		longText[5] = " and ";
